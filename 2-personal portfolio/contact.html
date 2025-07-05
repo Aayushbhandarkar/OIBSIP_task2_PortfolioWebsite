@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me | Ayush</title>
+  <style>
+    .contact-wrapper {
+      display: flex;
+      gap: 50px;
+    }
+
+    .contact-details {
+      flex: 1;
+    }
+
+    .contact-details h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--light);
+    }
+
+    .contact-details p {
+      max-width: 420px;
+      margin-bottom: 30px;
+      color: var(--text-secondary);
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .icon-box {
+      width: 50px;
+      height: 50px;
+      background: rgba(67, 97, 238, 0.1);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--primary);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .info-text h4 {
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+      color: var(--light);
+    }
+
+    .connect-links {
+      margin-top: 40px;
+    }
+
+    .connect-links h4 {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: var(--light);
+    }
+
+    .social-link {
+      margin-right: 15px;
+      font-size: 1.2rem;
+      color: var(--primary);
+      transition: color 0.3s ease;
+    }
+
+    .social-link:hover {
+      color: var(--light);
+    }
+
+    .form-area {
+      flex: 1;
+      background: var(--darker);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-row {
+      margin-bottom: 20px;
+    }
+
+    .input-row input,
+    .input-row textarea {
+      width: 100%;
+      padding: 15px 20px;
+      background: var(--gray);
+      border: 1px solid rgba(224, 224, 224, 0.1);
+      border-radius: 8px;
+      font-size: 1rem;
+      color: var(--text);
+      font-family: inherit;
+      transition: 0.3s ease;
+    }
+
+    .input-row input:focus,
+    .input-row textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+    }
+
+    .input-row textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="contact" class="contact section bg-gray">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Let's <span>Connect</span></h2>
+        <p class="section-subtitle">Open for collaborations and hiring</p>
+      </div>
+      <div class="contact-wrapper">
+
+        <!-- Contact Info Block -->
+        <div class="contact-details">
+          <h3>Reach Me</h3>
+          <p>Interested in working together? Let’s get in touch via email or social platforms.</p>
+
+          <div class="info-list">
+            <div class="info-row">
+              <div class="icon-box"><i class="fas fa-envelope"></i></div>
+              <div class="info-text">
+                <h4>Email</h4>
+                <p>ayushbhandarkar7@gmail.com</p>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+              <div class="info-text">
+                <h4>Phone</h4>
+                <p>+91 7767934036</p>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="info-text">
+                <h4>City</h4>
+                <p>Nagpur, India</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="connect-links">
+            <h4>Social Profiles</h4>
+            <a href="https://github.com/Aayushbhandarkar" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="http://www.linkedin.com/in/ayush-bhandarkar-555730286" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Form Block -->
+        <div class="form-area">
+          <form id="contactForm">
+            <div class="input-row">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="input-row">
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="input-row">
+              <input type="text" name="subject" placeholder="Subject" />
+            </div>
+            <div class="input-row">
+              <textarea name="message" placeholder="Type your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

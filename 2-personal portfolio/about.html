@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <style>
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .about-image {
+      flex: 1;
+    }
+
+    .about-img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      transition: transform 0.5s ease;
+    }
+
+    .image-container:hover .about-img {
+      transform: scale(1.02);
+    }
+
+    .experience-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 15px 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(67, 97, 238, 0.3);
+    }
+
+    .years {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .text {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .personal-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin: 25px 0;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 10px;
+    }
+
+    .info-label {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .info-value {
+      color: var(--text-secondary);
+    }
+
+    .about-buttons {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    /* ==== Skills Section (Shared) ==== */
+    .skills-container {
+      background-color: var(--darker);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .skills-category {
+      margin-bottom: 40px;
+    }
+
+    .skills-category:last-child {
+      margin-bottom: 0;
+    }
+
+    .skills-category h3 {
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background-color: var(--gray);
+      border-radius: 10px;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill-icon {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(67, 97, 238, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .skill-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    .skill-bar {
+      height: 8px;
+      background-color: var(--gray);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .skill-level {
+      height: 100%;
+      background-color: var(--primary);
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .skill-level::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      animation: progressShine 2s infinite;
+    }
+
+    @keyframes progressShine {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="about section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <p class="section-subtitle">A quick introduction</p>
+      </div>
+
+      <div class="about-content">
+        <!-- Profile Image -->
+        <div class="about-image">
+          <div class="image-container">
+            <img src="assets/about.jpg" alt="Ayush Bhandarkar Profile" class="about-img" />
+            <div class="experience-badge">
+              <!-- Optional experience badge -->
+              <!-- <span class="years">1+</span> -->
+              <!-- <span class="text">Years of Experience</span> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Section -->
+        <div class="about-text">
+          <h3>Who I Am</h3>
+          <p>I’m a self-motivated front-end developer with solid foundations in building modern web interfaces. My background in Computer Engineering helps me bridge the gap between design and functionality.</p>
+          <p>I’m keen on creating interactive and user-friendly websites, paying attention to both code quality and UI/UX aesthetics.</p>
+
+          <!-- Personal Details -->
+          <div class="personal-info">
+            <div class="info-item">
+              <span class="info-label">Name:</span>
+              <span class="info-value">Ayush Bhandarkar</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email:</span>
+              <span class="info-value">ayushbhandarkar7@gmail.com</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Education:</span>
+              <span class="info-value">B.Tech in Computer Engineering</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Location:</span>
+              <span class="info-value">Nagpur, India</span>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="about-buttons">
+            <a href="Resume.pdf" download="Ayush_Bhandarkar_Resume.pdf" class="btn btn-primary">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

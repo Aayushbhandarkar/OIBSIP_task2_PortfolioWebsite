@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush Bhandarkar | MERN Developer Portfolio</title>
+  <meta name="description" content="Portfolio site of Ayush Bhandarkar - passionate front-end developer and React enthusiast.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ 
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="brand-logo">
+        <a href="#home">AYUSH BHANDARKAR<span>.</span></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h4>Hello, I’m</h4>
+        <h1>Ayush Bhandarkar</h1>
+        <h2>Full-Stack (MERN) Developer</h2>
+        <p>I build fast, accessible websites using clean and modern technologies.</p>
+
+        <div class="cta-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-eye"></i> My Work
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Get in Touch
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/Aayushbhandarkar" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ayush-bhandarkar-555730286" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-codepen"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img src="Ayush Standing.jpg" alt="Profile image of Ayush" class="profile-img" />
+        </div>
+        <div class="tech-icons">
+          <div class="icon react" title="React"><i class="fab fa-react"></i></div>
+          <div class="icon js" title="JavaScript"><i class="fab fa-js"></i></div>
+          <div class="icon html" title="HTML"><i class="fab fa-html5"></i></div>
+          <div class="icon css" title="CSS"><i class="fab fa-css3-alt"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-down">
+      <a href="#about"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </section>
+
+  <div id="about-content"></div>
+  <div id="skills-content"></div>
+  <div id="projects-content"></div>
+  <div id="contact-content"></div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo"><a href="#home">AB<span>.</span></a></div>
+          <p>Passionate about designing and coding responsive web applications.</p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to get the latest updates and tips.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Ayush Bhandarkar. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+ 
+  <script src="script.js"></script>
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('about.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('about-content').innerHTML = data);
+
+      fetch('skills.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('skills-content').innerHTML = data);
+
+      fetch('projects.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('projects-content').innerHTML = data);
+
+      fetch('contact.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('contact-content').innerHTML = data);
+
+      
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
